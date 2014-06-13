@@ -19,7 +19,7 @@ by itself, with AngularJS it is.
   
 AngularJS for WordPress includes several directives (html elements) that will help you easily add in a block for a single post/page or a list. More directives will be added in.
 
-__JSON REST API (WP-API)__ required for plugin to work.
+__JSON REST API (WP-API)__ plugin required for AngularJS for WP to work.
 
 Current Directives
 -------------------
@@ -50,11 +50,7 @@ then renderring that to HTML using the client's machine. This will speed up your
 
 = What are directives? =
 
-Directives are a way for AngularJS to hook into HTML. In the case of this plugin, HTML elements were created that hook into the AngularJS functionality.  
-Current directives include:
-* ng-post
-* ng-posts
-* ng-new-post
+Directives are a way for AngularJS to hook into HTML. In the case of this plugin, HTML elements were created that hook into the AngularJS functionality.
 
 == Changelog ==
 
