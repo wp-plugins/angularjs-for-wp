@@ -19,6 +19,18 @@ by itself, with AngularJS it is.
   
 AngularJS for WordPress includes several directives (html elements) that will help you easily add in a block for a single post/page or a list. More directives will be added in.
 
+__JSON REST API (WP-API)__ required for plugin to work.
+
+Current Directives
+-------------------
+
+* `ng-post` - for getting a single post or page
+* `ng-posts` - for getting a list of posts or pages 
+* `ng-new-post` - for creating a client side form that creates new posts
+  
+View [docs](http://www.roysivan.com/angularjs-for-wordpress) for how to utilize the directives and their configurable attributes
+
+
 
 == Installation ==
 
