@@ -25,7 +25,6 @@ app.directive('ngPosts', ['$http', '$rootScope', function($http, $rootScope){
 				if(postType){
 					$scope.baseURL = $scope.baseURL + 'type[]=' + postType;
 				}
-				console.log($scope.baseURL);
 				$http.get($scope.baseURL).then(function(res){
 				 	$scope.postsD = res.data;
 				});

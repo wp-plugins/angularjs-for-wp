@@ -4,7 +4,7 @@ Donate link: http://www.codingofficehours.com/coh/#/teacher/23
 Tags: angularjs, client side, single page application
 Requires at least: 3.9
 Tested up to: 3.9.1
-Stable tag: 0.1
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,3 +57,6 @@ Directives are a way for AngularJS to hook into HTML. In the case of this plugin
 = 0.1 =
 * `ng-posts` and `ng-post` added
 * `ng-post` with cat id support added
+
+= 0.1.1 =
+* minor updates to post directive javascript
