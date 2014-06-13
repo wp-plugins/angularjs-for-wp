@@ -48,6 +48,14 @@ View [docs](http://www.roysivan.com/angularjs-for-wordpress) for how to utilize 
 AngularJS renders your posts client-side. WordPress is built on PHP, so every page a user visits is converted to HTML on the server, then served to the client. With ANgularJS you are only getting a JSON Object (text) from the server
 then renderring that to HTML using the client's machine. This will speed up your pages as well as allow for more concurrent visitors to your site as the strain on the server is reduced.
 
+= What are directives? =
+
+Directives are a way for AngularJS to hook into HTML. In the case of this plugin, HTML elements were created that hook into the AngularJS functionality.  
+Current directives include:
+* ng-post
+* ng-posts
+* ng-new-post
+
 == Changelog ==
 
 = 0.1 =
