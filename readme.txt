@@ -8,7 +8,7 @@ Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-AngularJS for WordPress allows you to easily leverage the power of AngularJS and put it into your theme.
+AngularJS for WordPress allows you to easily leverage the power of AngularJS and put it into your theme.  
 
 == Description ==
   
@@ -51,6 +51,12 @@ then renderring that to HTML using the client's machine. This will speed up your
 = What are directives? =
 
 Directives are a way for AngularJS to hook into HTML. In the case of this plugin, HTML elements were created that hook into the AngularJS functionality.
+
+= Installed the plugins, added in a directive but still get nothing =
+
+This could be because the JSON REST API is not configured properly. A good way to test is make sure that you do not get a 404 when you go to www.yourdomain.com/wp-json/posts (you should see a JSON object), if you get a 404, try resaving your permalinks.
+
+If you are still experiencing troubles use the support tab, or [e-mail me](http://roysivan.com/angularjs-for-wordpress/contact-developer)
 
 == Changelog ==
 
