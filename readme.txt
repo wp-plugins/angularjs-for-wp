@@ -22,8 +22,6 @@ AngularJS for WordPress includes several directives (html elements) that will he
 WordPress shortcodes for directives are also included to avoid any confusion with code  
   
 For even easier use for specific pages a new post meta box has been added. If selected the AngularJS directive will take over loading the content of the page client-side. This feature uses the post-content.html template.
-  
-[Full Documentation](http://www.roysivan.com/angularjs-for-wordpress)
 
 
 == Installation ==
