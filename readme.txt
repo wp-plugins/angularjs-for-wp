@@ -19,6 +19,10 @@ by itself, with AngularJS it is.
   
 AngularJS for WordPress includes several directives (html elements) that will help you easily add in a block for a single post/page or a list. More directives will be added in.
 
+WordPress shortcodes for directives are also included to avoid any confusion with code  
+  
+For even easier use for specific pages a new post meta box has been added. If selected the AngularJS directive will take over loading the content of the page client-side. This feature uses the post-content.html template.
+
 
 == Installation ==
 
@@ -35,6 +39,10 @@ AngularJS for WordPress includes several directives (html elements) that will he
 
 AngularJS renders your posts client-side. WordPress is built on PHP, so every page a user visits is converted to HTML on the server, then served to the client. With ANgularJS you are only getting a JSON Object (text) from the server
 then renderring that to HTML using the client's machine. This will speed up your pages as well as allow for more concurrent visitors to your site as the strain on the server is reduced.
+
+== Screenshots ==
+
+1. In verison __0.2__ a meta box on post and pages edit screen was added, choose yes to have the contenet of the page loaded with AngularJS automatically. A new custom template was also added (post-content.html) 
 
 == Changelog ==
 
