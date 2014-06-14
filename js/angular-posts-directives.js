@@ -25,6 +25,7 @@ app.directive('ngPosts', ['$http', '$rootScope', function($http, $rootScope){
 				if(postType){
 					$scope.baseURL = $scope.baseURL + 'type[]=' + postType;
 				}
+				console.log($scope.baseURL);
 				$http.get($scope.baseURL).then(function(res){
 				 	$scope.postsD = res.data;
 				});
@@ -67,6 +68,27 @@ app.directive('ngPost', ['$http', '$rootScope', function($http, $rootScope){
     	$scope.getPost($scope.id);
     },
 		template: '<div class="ngSingleWrapper"><ng-include src="\''+wpAngularVars.template_directory.single_detail+'\'"></ng-include></div>'
+	}
+}]);
+
+app.directive('ngPostContent', ['$http', '$rootScope', function($http, $rootScope){
+	return {
+		transclude: true,
+		restrict: 'E',
+		scope: {
+			id: '='
+		},
+		controller: ['$scope', '$http', function($scope, $http) {
+      		$scope.getPost = function(id) {
+	    	$http.get(wpAngularVars.base + '/posts/' + id + '?context=edit&_wp_json_nonce=' + wpAngularVars.nonce).then(function(res){
+				$scope.post = res.data;
+			});
+      	}
+    }],
+    link: function($scope, $elm, attrs, ctrl){
+    	$scope.getPost($scope.id);
+    },
+		template: '<div class="ngSingleWrapper"><ng-include src="\''+wpAngularVars.template_directory.post_content+'\'"></ng-include></div>'
 	}
 }]);
 
