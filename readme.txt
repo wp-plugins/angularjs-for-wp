@@ -14,7 +14,7 @@ AngularJS for WordPress allows you to easily leverage the power of AngularJS and
   
 AngularJS for WordPress was created to help anyone leverage the power of AngularJS and easily add it into their own theme.  
   
-AngularJS is a client-side templating framework that lets you extend HTML vocabulary for your applications. It has a markup more similar to what HTML used to be. HTML its not a dynamic language
+AngularJS is a client-side template framework that lets you extend HTML vocabulary for your applications. It has a markup more similar to what HTML used to be. HTML its not a dynamic language
 by itself, with AngularJS it is.
   
 AngularJS for WordPress includes several directives (html elements) that will help you easily add in a block for a single post/page or a list. More directives will be added in.
@@ -22,13 +22,15 @@ AngularJS for WordPress includes several directives (html elements) that will he
 WordPress shortcodes for directives are also included to avoid any confusion with code  
   
 For even easier use for specific pages a new post meta box has been added. If selected the AngularJS directive will take over loading the content of the page client-side. This feature uses the post-content.html template.
+  
+View [documentation](http://www.roysivan.com/angularjs-for-wordpress) for how to utilize the directives and shortcodes
 
 
 == Installation ==
 
 1. Download zipped archive of plugin
-1. Log into your WordPress dashobard and add the new plugin via upload
-1. ACtivate the plugin
+1. Log into your WordPress dashboard and add the new plugin via upload
+1. Activate the plugin
 1. Make sure you have the JSON REST API (WP-API) plugin also activated
 1. View [documentation](http://www.roysivan.com/angularjs-for-wordpress) for how to utilize the directives
 
@@ -54,3 +56,9 @@ then renderring that to HTML using the client's machine. This will speed up your
 * shortcodes [ng-posts] and [ng-post] added
 * custom post & page meta box for display page content created
 * new custom template added for displaying content on a single post or page (post-content.html)
+
+= 1.0 =
+* Updated to Angular 1.3.5
+* Fixed 404 issue with angular.min.js.map
+* Added in per-page for directives and shortcode for setting posts_per_page
+* Updated documentation website and readme
