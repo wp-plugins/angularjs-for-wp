@@ -3,7 +3,7 @@
  * Plugin Name: AngularJS for WordPress
  * Plugin URI: http://www.roysivan.com/angularjs-for-wordpress
  * Description: This plugin will allow you to easily load WordPress content client-side using AngularJS. JSON REST API required.
- * Version: 1.1
+ * Version: 1.1.1
  * Author: Roy Sivan
  * Author URI: http://www.roysivan.com
  * License: GPL2
@@ -71,7 +71,7 @@ class WordPressAngularJS {
 	
 	function post_add_tax( $post, $data, $update ) {
 		foreach( $data['post_taxonomies'] as $term => $tax ){
-			wp_set_post_terms( $post['ID'], array( intval( $term ) ), $tax, false );	        
+			wp_set_post_terms( $post['ID'], array( intval( $term ) ), $tax, true );	        
 	    }	    
 	}
 }
