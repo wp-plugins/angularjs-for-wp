@@ -101,18 +101,44 @@ app.directive('ngNewPost', ['$http', '$rootScope', function($http, $rootScope){
 		scope: {
 			id: '=',
 			redirectURL: '@redirectUrl',
-			afterSubmit: '@onSubmit'
+			afterSubmit: '@onSubmit',
+			postType: '@postType',
 		},
 		controller: ['$scope', '$http', function($scope, $http) {
+			
+			$scope.chosenTax = [];
+      		if( !$scope.postType )
+      			$scope.postType = 'post'
+      				
+			$http.get( wpAngularVars.base + '/taxonomies' ).then(function(res) {
+				$scope.taxonomies = [];
+				angular.forEach( res.data, function( value, key ) {
+					if( value.types.hasOwnProperty($scope.postType) && value.name !== 'Format' )
+						$http.get( wpAngularVars.base + '/taxonomies/' + value.labels.name_admin_bar.toLowerCase() + '/terms' ).then(function(res){
+							value.terms = res.data;
+							$scope.taxonomies.push( value );
+						});
+				});
+				
+			});
       		$scope.newPost = function() {
       			var form = jQuery('div.newPostFormWrapper form');
 	    		$scope.data = {
 	    			title: form.find('input[name="postTitle"]').val(),
 	    			content_raw: form.find('textarea[name="postContent"]').val(),
 	    			status: 'publish',
-	    			post_category: 4,
-	    			terms_names: [{ 'category': 4}]
+	    			post_type: $scope.postType,
+	    			post_taxonomies: []
 	    		}
+	    		form.find('select').each(function(key, value) { 
+		    		if( jQuery(this).val() ) {
+			    		var tax = jQuery(this).data('tax'),
+			    		terms = jQuery(this).val();
+			    		jQuery.each(terms, function( key, term ) {
+			    			$scope.data.post_taxonomies[term] = tax;
+			    		});
+		    		}
+		    	});
 	    		$http.post(wpAngularVars.base + '/posts/?_wp_json_nonce=' + wpAngularVars.nonce, $scope.data).then(function(res){
 					if(res.data){
 						// After Submit Function - redirect | clear | hide
