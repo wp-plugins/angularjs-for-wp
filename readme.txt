@@ -4,7 +4,7 @@ Donate link: http://www.codingofficehours.com/coh/#/teacher/23
 Tags: angularjs, client side, single page application
 Requires at least: 3.9
 Tested up to: 4.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,3 +62,6 @@ then renderring that to HTML using the client's machine. This will speed up your
 * Fixed 404 issue with angular.min.js.map
 * Added in per-page for directives and shortcode for setting posts_per_page
 * Updated documentation website and readme
+ 
+= 1.1 =
+* Added Taxonomy and post type to new post creation
