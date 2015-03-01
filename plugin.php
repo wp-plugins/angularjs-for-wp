@@ -53,7 +53,7 @@ class WordPressAngularJS {
 			$template_directory['new_post'] = get_bloginfo('template_directory').'/angularjs-templates/new-post.html';
 		}
 		if(file_exists(get_template_directory().'/angularjs-templates/post-content.html')) {
-			$template_directory['new_post'] = get_bloginfo('template_directory').'/angularjs-templates/post-content.html';
+			$template_directory['post_content'] = get_bloginfo('template_directory').'/angularjs-templates/post-content.html';
 		}
 
 		// Localize Variables
