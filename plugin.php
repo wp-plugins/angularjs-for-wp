@@ -77,17 +77,17 @@ class WordPressAngularJS {
 }
 
 /** JSON REST API CHECK **/
-function apiCheck(){
+function angular_wpapi_check(){
 	if ( !is_plugin_active( 'json-rest-api/plugin.php' ) ) {
-		add_action( 'admin_notices', 'apiError' );
+		add_action( 'admin_notices', 'angular_wpapi_error' );
 	}
 }
 
-function apiError(){
-	echo '<div class="error"><p><strong>JSON REST API</strong> must be installed and activated for this theme to work properly - <a href="https://wordpress.org/plugins/json-rest-api/" target="_blank">Install Plugin</a></p></div>';
+function angular_wpapi_error(){
+	echo '<div class="error"><p><strong>JSON REST API</strong> must be installed and activated for the <strong>AngularJS for WP</strong> plugin to work properly - <a href="https://wordpress.org/plugins/json-rest-api/" target="_blank">Install Plugin</a></p></div>';
 }
 
-add_action('admin_init', 'apiCheck');
+add_action('admin_init', 'angular_wpapi_check');
 
 new WordPressAngularJS();
 ?>
