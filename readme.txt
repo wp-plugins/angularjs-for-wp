@@ -68,3 +68,6 @@ then renderring that to HTML using the client's machine. This will speed up your
 
 =1.1.2=
 * Fix for new post template [fixing issue](https://wordpress.org/support/topic/template-override-for-new-posthtml-appears-to-not-be-working?replies=2#post-6635530)
+  
+ =1.2=
+ * No more global Angular App - redefined app to be more modular friendly

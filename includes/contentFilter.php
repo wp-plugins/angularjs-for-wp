@@ -2,7 +2,9 @@
 
 function angularFilter( $content ) {
 	global $post;
-
+	
+	$content = '<div ng-app="wpAngularPlugin">'.$content.'</div>';
+	
 	$meta = get_post_meta($post->ID, 'angularjsLoad', true);
 	$meta = intval($meta);
 

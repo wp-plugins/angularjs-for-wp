@@ -1,5 +1,5 @@
 // DIRECTIVES FOR POST and POSTS 
-app.directive('ngPosts', ['$http', '$rootScope', function($http, $rootScope){
+angular_app.directive('ngPosts', ['$http', '$rootScope', function($http, $rootScope){
 	return {
 		transclude: true,
 		restrict: 'E',
@@ -52,7 +52,7 @@ app.directive('ngPosts', ['$http', '$rootScope', function($http, $rootScope){
 	}
 }]);
 
-app.directive('ngPost', ['$http', '$rootScope', function($http, $rootScope){
+angular_app.directive('ngPost', ['$http', '$rootScope', function($http, $rootScope){
 	return {
 		transclude: true,
 		restrict: 'E',
@@ -73,7 +73,7 @@ app.directive('ngPost', ['$http', '$rootScope', function($http, $rootScope){
 	}
 }]);
 
-app.directive('ngPostContent', ['$http', '$rootScope', function($http, $rootScope){
+angular_app.directive('ngPostContent', ['$http', '$rootScope', function($http, $rootScope){
 	return {
 		transclude: true,
 		restrict: 'E',
@@ -94,7 +94,7 @@ app.directive('ngPostContent', ['$http', '$rootScope', function($http, $rootScop
 	}
 }]);
 
-app.directive('ngNewPost', ['$http', '$rootScope', function($http, $rootScope){
+angular_app.directive('ngNewPost', ['$http', '$rootScope', function($http, $rootScope){
 	return {
 		transclude: true,
 		restrict: 'E',
