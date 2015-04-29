@@ -4,7 +4,7 @@ Donate link: http://www.codingofficehours.com/coh/#/teacher/23
 Tags: angularjs, client side, single page application
 Requires at least: 3.9
 Tested up to: 4.2.1
-Stable tag: 1.2
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,3 +66,6 @@ then renderring that to HTML using the client's machine. This will speed up your
 
 = 1.2 =
 * Fix for new post template [fixing issue](https://wordpress.org/support/topic/template-override-for-new-posthtml-appears-to-not-be-working?replies=2#post-6635530)
+
+= 1.2.1 =
+* Child Theme Support
