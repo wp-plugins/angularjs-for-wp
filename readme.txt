@@ -4,7 +4,7 @@ Donate link: http://www.codingofficehours.com/coh/#/teacher/23
 Tags: angularjs, client side, single page application
 Requires at least: 3.9
 Tested up to: 4.2.1
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,3 +69,6 @@ then renderring that to HTML using the client's machine. This will speed up your
 
 = 1.2.1 =
 * Child Theme Support
+
+= 1.2.2 =
+* Adding in HTML Janitor - [fixing issue](https://github.com/royboy789/angularjs-for-wordpress/issues/6)
