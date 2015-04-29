@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: guavaworks
 Donate link: http://www.codingofficehours.com/coh/#/teacher/23
-Tags: angularjs, client side, single page application
+Tags: angularjs, angular js, angular, javascript, client side, single page application, mvc, client side framework
 Requires at least: 3.9
 Tested up to: 4.2.1
 Stable tag: 1.2.2
