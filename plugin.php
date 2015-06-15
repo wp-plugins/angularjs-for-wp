@@ -13,7 +13,7 @@ require_once('includes/metaBox.php');
 require_once('includes/contentFilter.php');
 require_once('includes/shortcodes.php');
 
-define('WordPressAngularJS', '1.2');
+define('WordPressAngularJS', '2.0');
 
 class WordPressAngularJS {
 	function WordPressAngularJS(){
@@ -80,7 +80,7 @@ class WordPressAngularJS {
 }
 
 /** JSON REST API CHECK **/
-function wpsd_check_dependencies() {
+function angularjs_plugin_dep() {
     if ( ! defined( 'REST_API_VERSION' ) ) {
         function wpsd_admin_notice() {
             printf( '<div class="error"><p>%s</p></div>', __( 'Activate the WP REST API plugin.  It
@@ -94,7 +94,7 @@ function angular_wpapi_error(){
 	echo '<div class="error"><p><strong>JSON REST API</strong> must be installed and activated for the <strong>AngularJS for WP</strong> plugin to work properly - <a href="https://wordpress.org/plugins/json-rest-api/" target="_blank">Install Plugin</a></p></div>';
 }
 
-add_action( 'admin_init', 'wpsd_check_dependencies', 99 );
+add_action( 'admin_init', 'angularjs_plugin_dep', 99 );
 
 new WordPressAngularJS();
 ?>
