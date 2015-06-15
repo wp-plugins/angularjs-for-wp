@@ -3,7 +3,7 @@
  * Plugin Name: AngularJS for WordPress
  * Plugin URI: http://www.roysivan.com/angularjs-for-wordpress
  * Description: This plugin will allow you to easily load WordPress content client-side using AngularJS. JSON REST API required.
- * Version: 2.0.0
+ * Version: 2.0.1
  * Author: Roy Sivan
  * Author URI: http://www.roysivan.com
  * License: GPL2
@@ -59,16 +59,26 @@ class WordPressAngularJS {
 			$template_directory['post_content'] = get_stylesheet_directory_uri().'/angularjs-templates/post-content.html';
 		}
 
+		
+		$angularjs_for_wp_localize = array( 
+			'site' => get_bloginfo('wpurl'), 
+			'nonce' => wp_create_nonce( 'wp_json' ), 
+			'template_directory' => $template_directory 
+		);
+		
+		if( function_exists( 'json_url' ) ) {
+			$angularjs_for_wp_localize['base'] = json_url();
+		}
+		
+		if( function_exists( 'rest_get_url_prefix' ) ) {
+			$angularjs_for_wp_localize['base'] = get_bloginfo( 'wpurl') . '/' . rest_get_url_prefix() . '/wp/v2';
+		}
+		
 		// Localize Variables
 		wp_localize_script( 
 			'angular-core', 
 			'wpAngularVars', 
-			array( 
-				'site' => get_bloginfo('wpurl'), 
-				'base' => get_bloginfo( 'wpurl') . '/' . rest_get_url_prefix() . '/wp/v2', 
-				'nonce' => wp_create_nonce( 'wp_json' ), 
-				'template_directory' => $template_directory 
-			) 
+			$angularjs_for_wp_localize 
 		);
 	}
 	
