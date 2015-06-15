@@ -4,7 +4,7 @@ Donate link: http://www.codingofficehours.com/coh/#/teacher/23
 Tags: angularjs, angular js, angular, javascript, client side, single page application, mvc, client side framework
 Requires at least: 3.9
 Tested up to: 4.2.2
-Stable tag: 2.0.1
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,3 +75,6 @@ then renderring that to HTML using the client's machine. This will speed up your
   
 = 2.0.1 =
 * Now works with JSON REST API v2 beta with v1 fallback
+
+= 2.1 =
+* Adding in fix for AngularJS FireBase Chat Room plugin shortcode
